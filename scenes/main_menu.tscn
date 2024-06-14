@@ -38,6 +38,19 @@ text = "OPTIONS"
 layout_mode = 2
 text = "QUIT"
 
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -59.0
+offset_top = 107.0
+offset_right = 50.0
+offset_bottom = 153.0
+grow_horizontal = 2
+text = "CLANDESTINE"
+fit_content = true
+
 [connection signal="button_down" from="VBoxContainer/Start" to="." method="_on_start_button_down"]
 [connection signal="button_down" from="VBoxContainer/Options" to="." method="_on_options_button_down"]
 [connection signal="button_down" from="VBoxContainer/Quit" to="." method="_on_quit_button_down"]
