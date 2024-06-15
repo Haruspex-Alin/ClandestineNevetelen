@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=3 uid="uid://c8h0hoxwsuu6a"]
+
+[ext_resource type="PackedScene" uid="uid://bl0q1xmnn688v" path="res://assets/debug_box.tscn" id="1_pmcpe"]
+[ext_resource type="PackedScene" uid="uid://dcs72u500iynh" path="res://assets/new_player.tscn" id="2_xbbd4"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_dgc50"]
+sky_top_color = Color(0.0647594, 0.103405, 0.236124, 1)
+sky_horizon_color = Color(0.542567, 0.557772, 0.645466, 1)
+sky_energy_multiplier = 0.9
+ground_bottom_color = Color(0.105509, 0.127682, 0.345742, 1)
+ground_horizon_color = Color(0.542567, 0.557772, 0.645466, 1)
+
+[sub_resource type="Sky" id="Sky_61i3b"]
+sky_material = SubResource("ProceduralSkyMaterial_dgc50")
+
+[sub_resource type="Environment" id="Environment_e788d"]
+background_mode = 1
+background_energy_multiplier = 0.04
+sky = SubResource("Sky_61i3b")
+ambient_light_source = 2
+ambient_light_color = Color(0.0475577, 0.0475576, 0.0475576, 1)
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="MovementTest" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_e788d")
+
+[node name="DebugBox" parent="." instance=ExtResource("1_pmcpe")]
+transform = Transform3D(24.2341, 0, 0, 0, 1, 0, 0, 0, 21.2679, 0, 0, 0)
+
+[node name="DebugBox2" parent="." instance=ExtResource("1_pmcpe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.7876, 1.0763, 4.82462)
+
+[node name="DebugBox3" parent="." instance=ExtResource("1_pmcpe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3544, 1.84704, 4.82461)
+
+[node name="DebugBox4" parent="." instance=ExtResource("1_pmcpe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.88001, 1.84704, -0.201986)
+
+[node name="DebugBox5" parent="." instance=ExtResource("1_pmcpe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.38254, 1.84704, -5.47014)
+
+[node name="DebugBox6" parent="." instance=ExtResource("1_pmcpe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.15456, 1.84704, -6.05001)
+
+[node name="DebugBox7" parent="." instance=ExtResource("1_pmcpe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.94387, 1.84704, 0.165247)
+
+[node name="DebugBox8" parent="." instance=ExtResource("1_pmcpe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.91138, 1.84704, -1.4712)
+
+[node name="Player_Character" parent="." instance=ExtResource("2_xbbd4")]

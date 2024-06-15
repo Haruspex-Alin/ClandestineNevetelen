@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://dcs72u500iynh"]
+
+[ext_resource type="PackedScene" uid="uid://oc13h3au02ro" path="res://Player_Controller/player_character.tscn" id="1_rwdxm"]
+
+[node name="Player_Character" instance=ExtResource("1_rwdxm")]
+
+[node name="blasterN" parent="Camera/LeanPivot/MainCamera/Weapons_Manager/Weapons_Models" index="0"]
+transform = Transform3D(-1, 0, 2.53518e-06, 0, 1, 0, -2.53518e-06, 0, -1, 0.193, 1.255, -0.643)
+
+[node name="blasterI" parent="Camera/LeanPivot/MainCamera/Weapons_Manager/Weapons_Models" index="1"]
+transform = Transform3D(-1, 0, -2.53518e-06, 0, 1, 0, 2.53518e-06, 0, -1, -0.148, 1.379, -0.398)
+
+[node name="blasterL" parent="Camera/LeanPivot/MainCamera/Weapons_Manager/Weapons_Models" index="2"]
+transform = Transform3D(-1, 0, -2.53518e-06, 0, 1, 0, 2.53518e-06, 0, -1, 0.117, 1.16, -0.512)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Camera" index="3"]
